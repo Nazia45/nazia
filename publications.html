@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications - Nazia Nuzhat's Portfolio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero Section with Background Image -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Nazia Nuzhat</h1>
+      <p>AI & Machine Learning Researcher</p>
+    </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="#">Publications</a>
+    <a href="projects.html">Projects</a>
+   </nav>
+  </div>
+
+  <!-- Publications Section -->
+  <section id="publications" class="publications container">
+    <h2>Publications</h2>
+    <div class="publication-item">
+      <span class="date">2024</span>
+      <h4>Switch Sensor for Fault Detection in Wind Energy Systems</h4> 
+      <a class="see-more">See more</a>
+      <p>This research focuses on fault detection using feed-forward neural networks to improve wind energy system efficiency.</p>
+    </div>
+    <div class="publication-item">
+      <span class="date">2023</span>
+      <h4>Lung Cancer Prediction using Deep Learning</h4>
+      <a class="see-more">See more</a>
+      <p>In this study, we enhance lung cancer prediction by improving preprocessing techniques.</p>
+    </div>
+    <div class="publication-item">
+      <span class="date">2023</span>
+      <h4>Plant Disease Classification using CNN</h4>
+      <a class="see-more">See more</a>
+      <p>This research utilizes convolutional neural networks with attention layers for accurate plant disease classification.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Nazia Nuzhat. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle publication descriptions
+    document.querySelectorAll('.see-more').forEach(item => {
+      item.addEventListener('click', event => {
+        const description = event.target.nextElementSibling;
+        if (description.style.display === 'block') {
+          description.style.display = 'none';
+          event.target.innerText = 'See more';
+        } else {
+          description.style.display = 'block';
+          event.target.innerText = 'See less';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
