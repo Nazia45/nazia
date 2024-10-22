@@ -3,10 +3,10 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+    font-size: 1.2vw; /* Further reduced base font size */
+}
 
-  /* Enhanced Cover Section with Background Image */
-  .hero {
+.hero {
     height: 50vh;
     display: flex;
     align-items: center;
@@ -15,273 +15,348 @@ body {
     color: white;
     text-align: center;
     position: relative;
-  }
+}
 
-  .hero::before {
+.hero::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
-  }
+}
 
-  .hero-content {
+.hero-content {
     position: relative;
-    z-index: 2; /* Bring content above overlay */
-  }
+    z-index: 2;
+    /* margin: 0px; */
+}
 
-  .hero-content h1 {
-    font-size: 3.5rem;
+.hero-content h1 {
+    font-size: 3.5vw; /* Further adjusted font size */
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.4vw; /* Slightly reduced spacing */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
+    margin: 0px;
+    position: relative;
+}
 
-  .hero-content p {
-    font-size: 1.5rem;
+.hero-content p {
+    font-size: 1.5vw; /* Further adjusted font size */
     font-weight: 300;
-    margin-top: 10px;
+    margin: 0px; /* Use vh for vertical spacing */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  }
+}
 
-  /* Navigation Bar */
-  .navbar {
+/* Navigation Bar */
+.navbar {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    top: 3vh; /* Use vh for vertical positioning */
+    right: 2vw; /* Use vw for horizontal positioning */
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
-    padding: 10px 20px;
-    z-index: 2; /* Above the hero overlay */
-    }
+    padding: 0.5vh 1vw; /* Reduced padding */
+    z-index: 2;
+}
 
-  .navbar a {
-    color: #ffffff; /* Change text color to white for better visibility */
-    margin: 0 15px;
+.navbar a {
+    color: #ffffff;
+    margin: 0 1vw; /* Reduced margin */
     text-decoration: none;
-    font-size: 1.2rem;
-    position: relative; /* Position for the pseudo-element */
-    }
+    font-size: 1.4vw; /* Further adjusted font size */
+    position: relative;
+}
 
-  .navbar a:hover {
+.navbar a:hover {
     color: #8d80bb;
-    }
+}
 
-    /* Underline Effect */
-   .navbar a::after {
+/* Underline Effect */
+.navbar a::after {
     content: "";
     display: block;
     width: 0;
-    height: 2px;
-    background: #ecf8f7; /* Underline color */
-    transition: width 0.6s; /* Animation duration */
+    height: 0.1vh; /* Reduced underline height */
+    background: #ecf8f7;
+    transition: width 0.6s;
     position: absolute;
-    bottom: -5px; /* Position under the text */
-    left: 0%; /* Center the underline */
-    }
+    bottom: -0.3vh; /* Adjusted for responsive spacing */
+    left: 0%;
+}
 
-   .navbar a:hover::after {
-    width: 100%; /* Full width on hover */
-    left: 0; /* Reset position on hover */
-    }
+.navbar a:hover::after {
+    width: 100%;
+    left: 0;
+}
 
-    
-  /* Image + Contact Section */
-  .intro-section {
+/* Image + Contact Section */
+.intro-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px 2%;
-  }
+    padding: 4vh 2vw; /* Reduced padding */
+}
 
-  .intro-section img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 40px;
-  }
+.intro-section img {
+    width: 16vw; /* Increased width for a larger appearance */
+    height: 16vw; /* Set height equal to width to maintain a round shape */
+    border-radius: 50%; /* Ensures the image is perfectly round */
+    object-fit: cover; /* Maintains aspect ratio and covers the area */
+    margin-right: 4vw; /* Spacing to the right */
+    border: 0.2vw solid #01550f; /* Soft pastel pink/golden border */
+    box-shadow: 0px 4px 6px rgba(112, 61, 3, 0.1); /* Subtle shadow */
+}
 
-  .intro-content {
-    max-width: 600px;
-  }
+.intro-content {
+    max-width: 60vw; /* Responsive max width */
+}
 
-  .intro-content h2 {
-    font-size: 2.5rem;
+.intro-content h2 {
+    font-size: 2.5vw; /* Further adjusted font size */
     color: #2c3e50;
-    margin-bottom: 20px;
-  }
+    margin-bottom: 1.5vh; /* Reduced spacing */
+}
 
-  .intro-content p {
-    font-size: 1.2rem;
+.intro-content p {
+    font-size: 1.4vw; /* Further adjusted font size */
     color: #7f8c8d;
-    margin-bottom: 20px;
-  }
+    margin-bottom: 0.8vh; /* Reduced spacing */
+}
 
-  .social-icons a {
+.social-icons a {
     color: #2c3e50;
-    margin-right: 15px;
-    font-size: 1.8rem;
+    margin-right: 1vw; /* Reduced spacing */
+    font-size: 2vw; /* Further adjusted font size */
     text-decoration: none;
     transition: color 0.3s ease;
-  }
+}
 
-  .social-icons a:hover {
+.social-icons a:hover {
     color: #2980b9;
-  }
+}
 
-  /* About Section */
-  .about-section {
-    padding: 60px 2%;
+/* About Section */
+.about-section {
+    padding: 5vh 2vw; /* Reduced padding */
     background-color: #ecf0f1;
     text-align: center;
-  }
+}
 
-  .about-section h2 {
-    font-size: 2.5rem;
+.about-section h2 {
+    font-size: 2vw; /* Further adjusted font size */
     color: #2c3e50;
-    margin-bottom: 40px;
-  }
+    margin-bottom: 2vh; /* Reduced spacing */
+}
 
-  .about-section p {
-    font-size: 1.2rem;
-    color: #7f8c8d;
-    max-width: 800px;
+.about-section p {
+    font-size: 1.3vw; /* Further adjusted font size */
+    color: #202222;
+    max-width: 80vw; /* Responsive max width */
     margin: 0 auto;
-    line-height: 1.7;
-  }
+    line-height: 1.5;
+    text-align: justify;
+}
 
-  /* Publications Section */
-  .publications {
-    padding: 60px 2%;
+
+/* Publications Section */
+.publications {
+    padding: 5vh 2vw; /* Reduced padding */
     background-color: #fff;
-  }
+    align-items: center;
+    max-width: 70vw;
+}
 
-  .publications h2 {
+.publications h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2vw; /* Further adjusted font size */
     color: #2c3e50;
-    margin-bottom: 40px;
-  }
+    margin-bottom: 2vh; /* Reduced spacing */
+}
 
-  .publication-item {
-    margin-bottom: 15px; /* Reduced gap */
-    padding: 20px;
+.publication-item {
+    margin-bottom: 1.5vh; 
+    padding: 1.5vh; 
     background: #ecf0f1;
-    border-radius: 8px;
-  }
+    border-radius: 0.8vw;
+}
 
-  .publication-item h4 {
-    font-size: 1.4rem;
+.publication-item h4 {
+    font-size: 1.4vw; /* Further adjusted font size */
     color: #2c3e50;
-    margin-bottom: 10px;
-  }
+    margin-bottom: 1vh; /* Reduced spacing */
+}
 
-  .publication-item .date {
-    font-size: 0.9rem;
+.publication-item .date {
+    font-size: 1vw; /* Further adjusted font size */
     color: #95a5a6;
-    margin-right: 10px;
-  }
+    margin-right: 1vw; /* Reduced spacing */
+}
 
-  .publication-item p {
-    font-size: 1.1rem;
+.publication-item p {
+    font-size: 1.1vw; /* Further adjusted font size */
     color: #7f8c8d;
     display: none;
-    transition: max-height 0.4s ease-in-out; /* Smooth transition */
-  }
+    transition: max-height 0.4s ease-in-out;
+}
 
-  .publication-item a {
+.publication-item a {
     color: #2980b9;
     cursor: pointer;
     text-decoration: none;
-  }
+}
 
-  /* Projects Section */
-  .projects {
-    padding: 60px 2%;
+/* Projects Section */
+.projects {
+    padding: 5vh 2vw; /* Reduced padding */
     background-color: #ecf0f1;
-  }
+}
 
-  .projects h2 {
+.projects h2 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-size: 2vw; /* Further adjusted font size */
+    margin-bottom: 2vh; /* Reduced spacing */
     color: #2c3e50;
-  }
+}
 
-  .project-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
+.project-cards {
+    height: auto; 
+    min-height: 50vh; 
+    box-sizing: border-box; 
+    padding: 2vh 1vw; 
+    display: flex; 
+    justify-content: center; 
+    align-items: stretch; 
+    z-index: 1;
+}
 
-  .project-card {
-    width: 30%;
+.project-card {
+    width: 25%; /* Percentage width for cards */
     background-color: white;
-    padding: 25px;
-    margin: 15px;
+    padding: 1.5vh; /* Reduced padding */
+    margin-top: 1.2vh; /* Reduced margin */
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 0.8vw;
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
+    border: 0.5vw solid #fff;
 
-  .project-card:hover {
-    transform: translateY(-5px);
-  }
+    position: relative; /* For positioning the background image */
+    overflow: hidden; /* Ensures anything overflowing is hidden */
+}
 
-  .project-card h4 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #2c3e50;
-  }
+.project-card .project-bg {
+    position: absolute; /* Positioning the background image */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; /* Place the image behind the text */
+    opacity: 0.3; /* Make it less prominent */
+    object-fit: cover; /* Ensure the image covers the card area */
+    width: 100%; /* Ensure the image width covers the card */
+    height: 100%; /* Ensure the image height covers the card */
+}
 
-  .project-card p {
-    font-size: 1.1rem;
-    color: #7f8c8d;
-    line-height: 1.7;
-  }
+.project-card:hover {
+    /* transform: translateY(-1.5vh); */
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
 
-  .project-card a {
+.project-card h4 {
+    font-size: 1.5vw; /* Further adjusted font size */
+    /* margin-bottom: 1.5vh; Reduced spacing */
+    margin-top: 12vh;
+    color: #000000;
+    z-index: 1;
+}
+
+.project-card p {
+    font-size: 1.1vw; /* Further adjusted font size */
+    color: #212424;
+    line-height: 1.5;
+    margin: 0px;
+    z-index: 1;
+}
+
+.project-card a {
     color: #fff;
     background-color: #2980b9;
-    padding: 10px 15px;
+    padding: 0.8vh 1.5vw; /* Reduced padding */
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-  }
+    z-index: 1;
+}
 
-  .project-card a:hover {
-    background-color: #3498db;
-  }
+.project-card a:hover {
+    background-color: #0ec094;
+}
 
-  /* Footer */
-  footer {
+
+/* Footer */
+footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 2vh 0; /* Reduced padding */
     background-color: #2c3e50;
     color: white;
-  }
+}
 
-  @media (max-width: 768px) {
-    .project-card {
-      width: 100%;
+/* Hiding Publications and Projects Sections Initially */
+#publications, #projects {
+    display: none; /* Initially hide sections until we fetch the content */
+}
+
+/* Print Icon Button Styles */
+.print-icon {
+    padding: 1vh 1vw; /* Reduced padding */
+    background-color: #4CAF50; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1.3vw; /* Further adjusted font size */
+    position: absolute; /* Absolute positioning */
+    top: 56%; /* Adjusted vertical position */
+    right: 2vw; /* Right side spacing */
+    transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.print-icon:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        height: 40vh;
     }
-
     .intro-section {
-      flex-direction: column;
-      text-align: center;
+        flex-direction: column; /* Stack on smaller screens */
     }
 
     .intro-section img {
-      margin-right: 0;
-      margin-bottom: 20px;
+        margin-bottom: 2vh; /* Margin below image for spacing */
     }
-  }
+}
+
+@media (max-width: 480px) {
+    /* .hero-content p,
+    .intro-content h2,
+    .publications h2,
+    .projects h2 {
+        font-size: 2.4vw; 
+    } */
+
+    .print-icon {
+        display: none;
+    }
+}
