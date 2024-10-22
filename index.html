@@ -3,192 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nazia Nuzhat's Portfolio</title>
+  <title>Nazia Nuzhat</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Enhanced Cover Section with Background Image */
-    .hero {
-      height: 50vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: url('https://img.freepik.com/premium-vector/luxurious-golden-background-vector-illustration_41084-634.jpg') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      position: relative;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2; /* Bring content above overlay */
-    }
-
-    .hero-content h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .hero-content p {
-      font-size: 1.5rem;
-      font-weight: 300;
-      margin-top: 10px;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    }
-
-
-    /* Navigation Bar */
-    .navbar {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    border-radius: 5px;
-    padding: 10px 20px;
-    z-index: 2; /* Above the hero overlay */
-    }
-
-    .navbar a {
-    color: #ffffff; /* Change text color to white for better visibility */
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    position: relative; /* Position for the pseudo-element */
-    }
-
-    .navbar a:hover {
-    color: #8d80bb;
-    }
-
-    /* Underline Effect */
-    .navbar a::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #ecf8f7; /* Underline color */
-    transition: width 0.6s; /* Animation duration */
-    position: absolute;
-    bottom: -5px; /* Position under the text */
-    left: 0%; /* Center the underline */
-    }
-
-    .navbar a:hover::after {
-    width: 100%; /* Full width on hover */
-    left: 0; /* Reset position on hover */
-    }
-
-    /* Image + Contact Section */
-    .intro-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 50px 2%;
-    }
-
-    .intro-section img {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 40px;
-    }
-
-    .intro-content {
-      max-width: 600px;
-    }
-
-    .intro-content h2 {
-      font-size: 2.5rem;
-      color: #2c3e50;
-      margin-bottom: 20px;
-    }
-
-    .intro-content p {
-      font-size: 1.2rem;
-      color: #7f8c8d;
-      margin-bottom: 20px;
-    }
-
-    .social-icons a {
-      color: #2c3e50;
-      margin-right: 15px;
-      font-size: 1.8rem;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      color: #2980b9;
-    }
-
-    /* About Section */
-    .about-section {
-      padding: 60px 2%;
-      background-color: #ecf0f1;
-      text-align: center;
-    }
-
-    .about-section h2 {
-      font-size: 2.5rem;
-      color: #2c3e50;
-      margin-bottom: 40px;
-    }
-
-    .about-section p {
-      font-size: 1.2rem;
-      color: #7f8c8d;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      background-color: #2c3e50;
-      color: white;
-    }
-
-    @media (max-width: 768px) {
-      .project-card {
-        width: 100%;
-      }
-
-      .intro-section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .intro-section img {
-        margin-right: 0;
-        margin-bottom: 20px;
-      }
-    }
-  </style>
 </head>
 <body>
     
@@ -201,45 +20,148 @@
     
     <!-- Navigation Bar -->
     <nav class="navbar">
-      <a href="#">Home</a>
-      <a href="publications.html">Publications</a>
-      <a href="projects.html">Projects</a>
+      <a href="index.html" onclick="home()">Home</a>
+      <a href="#" onclick="publications()">Publications</a>
+      <a href="#" onclick="projects()">Projects</a>
     </nav>
   </div>
+  <!-- <button id="Print-Button" class="btn btn-primary print-button" onclick="printAllPages()" style="display:none">Print All</button> -->
+  <i id="Print-Button" class="fas fa-print print-icon" onclick="printAllPages()" title="Print"></i>
 
   <!-- Intro Section with Image and Info -->
-  <section class="intro-section">
+  <section class="intro-section" id="intro">
     <img src="288x213.jpg" alt="Nazia Nuzhat">
     <div class="intro-content">
       <h2>Contact Me</h2>
-      <p>Email: nazia@example.com | Phone: +123 456 7890</p>
+      <p>Email: nazia.nuzhat24@gmail.com </p>
+      <p>Location: Dhaka, Bangladesh</p>
+      <!-- <p><a href="https://calendly.com/nazia-nuzhat" target="_blank">Schedule a Meeting</a></p> -->
+      <p><a href="#" target="_blank">My Resume</a></p>
+      <p><a href="#" target="_blank">Visit My Blog</a></p>
       <div class="social-icons">
-        <a href="https://www.linkedin.com/in/nazia-nuzhat" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/nazianuzhat" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="mailto:nazia@example.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.facebook.com/nazia.nuzhat" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://twitter.com/nazia_nuzhat" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/nazianuzhat" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Nazia45" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:nazia.nuzhat24@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.facebook.com/nnr.nnr.1" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <!-- <a href="https://twitter.com/nazia_nuzhat" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a> -->
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="about-section">
-    <h2>About Me</h2>
-    <p>I am an AI & ML researcher with expertise in applying machine learning to healthcare solutions. My background includes a B.Sc. and M.Sc. in Computer Science, focusing on medical web-based applications and IoT-integrated machine learning systems.</p>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+  <h2>About Me</h2>
+  <p>
+    I am an <strong>AI & Machine Learning Researcher</strong> with a deep interest in applying advanced technologies to solve real-world healthcare challenges. My academic journey includes a <strong>B.Sc.</strong> and <strong>M.Sc.</strong> in Computer Science, where I specialized in developing <strong>medical web applications</strong> and integrating <strong>IoT systems with machine learning</strong>.
+  </p> <br>
+
+  <div class="research-interests">
+    <h3></h3>
+    <p class="sub_heading"><b>Research Interest:</b></p>
+    <p>
+      My key research interests include:
+      <span>AI and Machine learning applications in healthcare</span>,
+      <span>Adversarial machine learning</span>
+      <span>Ensemble learning</span>,
+      <span>Deep learning for image classification</span>,
+      <span>IOT</span>,
+      <span>HCI</span>.
+      
+    </p>
+  </div>
+
+</section>
+
+
+  <!-- Publications Section -->
+  <section id="publications" class="publications container">
+    <h2>Publications</h2>
+    <div class="publication-item">
+      <span class="date">Jul. 2024 to Oct. 2024</span>
+      <h4>A Performance Comparison of Ensemble Models for Breast Cancer Classification. (Ready to Publish)</h4> 
+      <a class="see-more" onclick="see_more()">See more</a>
+      <p><b>*</b> multiple ensemble models are compared to classify breast cancer by using Wisconsin Medical Dataset (70:30 ratio for train and test set respectively).</p>
+    </div>
+    <div class="publication-item">
+      <span class="date">Jul. 2024 to Sept. 2024</span>
+      <h4>All in one PICkit 2 programmer. (Ready to Publish)</h4>
+      <a class="see-more" onclick="see_more()">See more</a>
+      <p><b>*</b> We developed customized hardware, including a specialized motherboard, with the capability to program a wide range of microcontrollers, including the PIC32F series.</p>
+    </div>
+    <div class="publication-item">
+      <span class="date">Nov. 2022 to Jul. 2023</span>
+      <h4>Switched Fault tolerant Backstepping Control of a Rotor Tied DFIG Wind Energy Conversion System under Current Sensor Fault detection using Feedforward Neural Network (Accepted)</h4>
+      <a class="see-more" onclick="see_more()">See more</a>
+      <p><b>*</b> We proposed Stator-Current Loop Backstepping Control (SLBSC) and Rotor-Current Loop Backstepping Control (RLBSC) to regulate the RT-DFIG system, improving efficiency and reducing computational complexity. <br>
+      <b>*</b> A Feed-Forward Neural Network (FF-NN) based fault diagnosis (FD) model was introduced to identify fault types and switch control between faulty and healthy sensors seamlessly.</p>
+    </div>
+
+<br> <hr>
+    <h2>Research Experience</h2>
+    <div class="publication-item">
+      <span class="date">May. 2024 to Current</span>
+      <h4>Predictive Modeling on Lung Cancer Cell</h4> 
+      <a class="see-more" onclick="see_more()">See more</a>
+      <p><b>*</b>In this study, we enhance lung cancer prediction by improving preprocessing techniques. </p>
+    </div>
+    <div class="publication-item">
+      <span class="date">Jan. 2024 to Current</span>
+      <h4>Classification and Comparison of Road Accident Zones</h4>
+      <a class="see-more" onclick="see_more()">See more</a>
+      <p><b>*</b> We utilized multiple machine learning algorithms to pinpoint accident-prone areas on the Mawa highway in Bangladesh. <br>
+      <b>*</b> Currently working on predicting it's severity using multi-model techniques.</p>
+    </div>
   </section>
 
-  <!-- Links Section -->
-  <!-- <section id="links" class="links-section">
-    <h2>Explore More</h2>
-    <a href="publications.html" class="btn btn-primary">View Publications</a>
-    <a href="projects.html" class="btn btn-primary">View Projects</a>
-  </section> -->
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <div class="project-card">
+          <h4>Ensemble Models for Breast Cancer Classification - (2024)</h4>
+          <p>Here we implemented multiple ensemble model and compared them.</p>
+          <!-- <a href="#" target="_blank">Learn More</a> -->
+        </div>
+        <div class="project-card">
+            <!-- <img src="288x213.jpg" alt="Project Image" class="project-bg"> -->
+          <h4>Fundamental Medical Aid (Medi-Aid) - (2022)</h4>
+          <p>I have done this project in my MSC final year.  The main goal of this web based project is to provide immediate medical assistance.</p>
+          <!-- <a href="#" target="_blank">Learn More</a> -->
+        </div>
+        <div class="project-card">
+          <h4>Proper Use of Antibiotics and Safe Health (PUASH). - 2021</h4>
+          <p> This project aims to prevent antibiotic 
+            overdoses by allowing doctors to access patients' medical history 
+            using a unique patient ID for better treatment management. </p>
+          <!-- <a href="#" target="_blank">Learn More</a> -->
+        </div>
+      </div>
+    </section>
+
+
+<!-- Placeholder for Publications and Projects -->
+<!-- <section id="publications-container"></section> -->
+<!-- <div id="projects-container"></div> -->
+
+<!-- Button to trigger loading the section -->
+<!-- <button onclick="loadPublications()">Load Publications Section</button> -->
+
+
+<!-- Print Button -->
+<!-- <button id="Print-Button" class="btn btn-primary print-button" onclick="printAllPages()">Print All</button> -->
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2024 Nazia Nuzhat. All Rights Reserved.</p>
   </footer>
 
+
+<script src="script.js"></script>
+
+
+  
 </body>
 </html>
